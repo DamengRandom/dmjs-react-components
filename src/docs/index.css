@@ -3,3 +3,8 @@ html,
 body {
   font-family: 'Quattrocento Sans', sans-serif;
 }
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
