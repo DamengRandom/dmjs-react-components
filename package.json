@@ -1,12 +1,16 @@
 {
   "name": "dmjs-react-components",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "",
   "main": "build/index.js",
+  "jest": {
+    "verbose": true
+  },
   "scripts": {
     "start": "webpack --watch",
     "dev": "./node_modules/.bin/parcel src/docs/index.html",
-    "build": "webpack"
+    "build": "webpack",
+    "test": "jest --config=jest.config.json"
   },
   "keywords": [
     "dmjs",
@@ -28,11 +32,14 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.8.0",
+    "jest": "^24.0.0",
     "parcel-bundler": "^1.11.0",
     "webpack-cli": "^3.2.1"
   }
