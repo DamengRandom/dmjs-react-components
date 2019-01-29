@@ -16,8 +16,8 @@ const ComponentTitle = styled.div`
 const Section = styled.div`
   width: 100%;
   display: flex;
-  div {
-    padding: 12pt;
+  button {
+    margin: 6pt 8pt;
   }
 
   @media only screen and (max-width: 600px) {
