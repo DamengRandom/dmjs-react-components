@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 // lib components
 import { Button } from '../lib/Button';
+import { Navbar } from '../lib/Navbar';
 
 const Contents = styled.div`
   padding: 16pt 32pt;
@@ -25,49 +26,15 @@ const Section = styled.div`
   }
 `;
 
-const TopNavbar = styled.div`
-  width: 100%;
-  background-color: #00a7f8;
-  display: flex;
-  align-items: center;
-  color: white;
-
-  & > div {
-    width: 50%;
-    h3 {
-      margin: 0;
-      padding: 12pt 8pt;
-    }
-  }
-
-  & > .nav-links {
-    text-align: right;
-    & > a {
-      color: white;
-      padding-right: 12pt;
-    }
-  }
-`;
-
-const navbarTitle = `DMJS Components - Demo(s)`;
-
-export const Navbar = () => (
-  <TopNavbar>
-    <div className="nav-title">
-      <h3>{navbarTitle}</h3>
-    </div>
-    <div className="nav-links">
-      <a href="https://github.com/DamengRandom" target="_blank">
-        <i className="fab fa-github"></i>
-      </a>
-    </div>
-  </TopNavbar>
-);
+const title = "DMJS React Components";
+const links = [
+  { type: 'icon', target: '_blank', href: 'https://github.com/DamengRandom', icon: 'fab fa-github' },
+];
 
 const App = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar title={title} links={links} />
       <Contents>
         <ComponentTitle>
           <h4>-- Button(s) --</h4>
